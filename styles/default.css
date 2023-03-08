@@ -1,0 +1,79 @@
+header, footer {
+    text-align: center;
+}
+
+body {
+    background: #b0d7ff;    
+    color: #2d3142;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+#page-wrap
+{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+@media (max-width: 960px) {
+    #page-wrap {
+        margin: 0 5vw;
+    }
+}
+
+a:hover {
+    color: purple;
+}
+a:visited, a:link{
+    color: #002efa;
+    text-decoration: none;
+}
+
+button 
+{
+    background-color: indigo;
+    color: white
+}
+
+button:disabled {
+    background-color: rgb(97, 78, 110);
+}
+
+fieldset
+{
+    background-color: rgb(32, 125, 82);
+    color: #ebf5ff;
+    border:none;
+    padding: 1em;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+}
+
+fieldset legend {
+    font-family: Impact;
+    font-size: 115%;
+    color: black;
+}
+
+input {
+    border: 1px solid black;
+}
+
+figcaption
+{
+    font-style: italic;
+}
+
+img
+{
+    text-align: center;
+}
+
+#header {
+    text-align: center;
+}
+
+#footer {
+    text-align: center;
+}

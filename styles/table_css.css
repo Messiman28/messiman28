@@ -1,0 +1,20 @@
+table
+{
+	border-collapse: collapse;
+	margin: 20px;
+}
+
+.head
+{
+    background-color: dimgray;
+}
+
+.even 
+{
+    background-color: ghostwhite;
+}
+
+.odd 
+{
+    background-color: rgb(185, 184, 178);
+}

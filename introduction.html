@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIS3135 | Josh Lucia's Jaded Lihzard | Introduction</title>
+    <link href="styles/default.css" rel="stylesheet">
+</head>
+<body>
+    <div id="page-wrap">
+        <div id="header"></div>
+        <main>
+            <h2>Josh Lucia - Introduction</h2>
+            <h2>Josh Lucia</h2>
+            <figure>
+                <img src="images/kai_and_bee.jpeg" alt="Silly little Kai holding his stilly little bee"
+                    style="width:510px;height:323px;">
+                <figcaption>Silly little Kai holding his silly little bee</figcaption>
+            </figure>
+            <ul>
+                <li><strong>Personal Background: </strong>Born in Austell, Georgia, but moved out to Raleigh, NC when I
+                    was 3, so the only thing from back there that I remember is burying my cat. Since then, the only pet
+                    I’ve had was guinea pigs for a couple months. I went over to friend’s houses all the time to play
+                    with their dogs.</li>
+                <li><strong>Professional Background: </strong>As someone fresh to my 20s, I’ve only worked part time
+                    jobs and focused on school. I worked for 5 years at a snowcone stand and can whip up some amazing
+                    flavor combinations. After leaving because I moved to Charlotte, I applied to an ALDI and now work
+                    there on weekends.</li>
+                <li><strong>Academic Background: </strong>GED from Apex High School with a few computer science classes
+                    under my belt, moved on to Wake Tech Community College in order to get many general education
+                    classes out of the way. Finally, I’m in my last year of my Bachelors of Computer Science degree.
+                </li>
+                <li><strong>Background in this Subject: </strong>Growing up, I was the tech kid in the house who could
+                    fix/diagnose most problems. Now that I have programming experience, I have knowledge in the big OOP
+                    languages, but not much in web languages.</li>
+                <li><strong>Primary Computer Platform: </strong>Windows 10 PC at home, and a Mac M1 laptop for school.
+                </li>
+                <li><strong>Courses I'm in and Why: </strong>
+                    <ol>
+                        <li><strong>ITCS 4230 – Intro to Game Design</strong>
+                            – I like videogames and it sounded like a fun course toward my degree</li>
+                        <li><strong>ITIS 3135 - Web Apps Development</strong>
+                            – Wanted to try to get some HTML/CSS experience</li>
+                        <li><strong>ITCS 4145 – Intelligent Robotics</strong>
+                            – Took Mobile Robotics and wanted to try another robotics class</li>
+                        <li><strong>ITCS 4156 – Intro to Machine Learning</strong>
+                            – Finished my AI class and wanted to delve deeper into it.</li>
+                    </ol>
+                </li>
+                <li><strong>Funny/Interesting Item about Yourself: </strong>My entire life has in some way revolved
+                    around the fact that my butt is bigger than most.</li>
+                <li><strong>I'd also like to Share: </strong>I’m just a silly little guy with a lack of social cue
+                    awareness</li>
+            </ul>
+            <p>Glad you could make it. Come back early and often for updates</p>
+        </main>
+        <div id="footer"></div>
+    </div>
+</body>
+    <script>
+        fetch("components/header.html")
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            document.querySelector("#header").innerHTML = data;
+        })
+        fetch("components/footer.html")
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            document.querySelector("#footer").innerHTML = data;
+        })
+    </script>
+</html>

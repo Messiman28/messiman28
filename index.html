@@ -1,6 +1,31 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<h1>I'm Josh Lucia and this is the root of my website</h1>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIS3135 | Josh Lucia's Jaded Lihzard | Home</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    
 </head>
+
 <body>
+    <div id="page-wrap">
+        <div id="header"></div>
+        <main>
+            <h2>Josh Lucia - Home</h2>
+        </main>
+        <div id="footer"></div>
+    </div>
+    <script>
+        $(function () {
+            $("#header").load("components/header.html");
+            $("#footer").load("components/footer.html");
+        });
+    </script>
 </body>
+
+</html>

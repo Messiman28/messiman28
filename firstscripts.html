@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITIS3135 | Josh Lucia's Jaded Lihzard | First Scripts</title>
+    <link href="styles/default.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!--Respectfully, you're wrong about diagonal braces ¯\_(ツ)_/¯-->
+    <style>
+        #time {
+            margin: auto;
+            text-align: center;
+            font-size: 120%;
+            padding: 0;
+        }
+    </style>
+    <script src="scripts/defaultscripts.js"></script>
+</head>
+
+<body>
+    <div id="page-wrap">
+        <div id="header"></div>
+        <main>
+            <h2>Josh Lucia - First Scripts</h2>
+            <fieldset id="time">
+                <h3 id="time_display">Wait?</h3>
+                <script>
+                    let d = new Date();
+                    let hours = d.getHours();
+                    let mins = d.getMinutes();
+                    //fun use of ternary operator
+                    let ampm = hours < 12 ? "am" : "pm";
+                    hours = hours == 0 ? 12 : hours;
+                    hours = hours > 12 ? hours-12 : hours;
+                    mins = mins < 10 ? "0" + mins : mins;
+                    let t = hours + ":" + mins + ampm;
+                    document.getElementById("time_display").innerHTML = "Today is " + t + " on " + d.toDateString();
+                </script>
+
+            </fieldset>
+            <fieldset>
+                <label for="name">What is your name?: <input required id="name" type="text"></label>
+                <br>
+                <label for="feeling">How are you feeling?: <input required id="feeling" type="text"></label>
+                <p id="greeting"></p>
+                <button onclick="greetUser()">Submit</button>
+            </fieldset>
+            <fieldset>
+                <h3 style="text-align: center;">Have fun with these buttons :)</h3>
+                <button id="unclickable" onclick="buttonUnclickable()">Oh you thought I cared?</button><br>
+                <button id="lick" onclick="playLickEffect()">hehe guess what?</button>
+                <p style="display:inline" id="lick_out"></p><br>
+                <button id="move" onclick="moveSides()">wanna see real speed?</button><br>
+                <button id="fat" onclick="moreFat()">fat</button><br>
+                <button id="reset" onclick="reset()">reset buttons</button><br>
+            </fieldset>
+            <div id="footer"></div>
+        </main>
+    </div>
+</body>
+
+    <script>
+        $(function () {
+            $("#header").load("components/header.html");
+            $("#footer").load("components/footer.html");
+        });
+    </script>
+</html>
